@@ -1,6 +1,7 @@
 "カラースキーム
 "colorscheme DimGrey
 colorscheme wombat
+"colorscheme camo
 
 "縦幅
 set lines=35
@@ -12,3 +13,4 @@ set guifont=Ricty:h15
 
 "クリップボードの同期
 set clipboard=unnamed,autoselect
+
