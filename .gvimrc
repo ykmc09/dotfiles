@@ -1,7 +1,8 @@
 "カラースキーム
 "colorscheme DimGrey
-colorscheme wombat
+"colorscheme wombat
 "colorscheme camo
+colorscheme jellybeans
 
 "縦幅
 set lines=35

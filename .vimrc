@@ -5,6 +5,7 @@ filetype on
 set backupdir=~/.tmp
 set directory=~/.tmp
 
+
 "---------------------------------------------------------------------------
 " 検索挙動に関する設定:
 "
@@ -46,7 +47,10 @@ set number
 set ruler
 " タブや改行を表示
 set list
-set listchars=tab:».,trail:_,eol:↲,extends:»
+set listchars=tab:▸.,trail:_,eol:↲,extends:»
+" 全角スペースを表示
+highlight zenkakuspace ctermbg=7
+call matchadd("zenkakuspace", '\%u3000')
 " 行折り返し
 set wrap
 " 常にステータス行を表示
@@ -95,6 +99,7 @@ Bundle 'ZenCoding.vim'
 Bundle 'surround.vim'
 Bundle 'quickrun.vim'
 Bundle 'neocomplcache'
+Bundle 'vim-coffee-script'
 
 " neocomplcache
 let g:neocomplcache_enable_at_startup = 1
