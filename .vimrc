@@ -23,7 +23,8 @@ set wrapscan
 " 編集に関する設定:
 "
 " タブ幅
-set tabstop=4
+set tabstop=2
+set shiftwidth=2
 " タブをスペースに展開しない
 set noexpandtab
 " 自動インデント
