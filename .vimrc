@@ -100,7 +100,9 @@ Bundle 'ZenCoding.vim'
 Bundle 'surround.vim'
 Bundle 'quickrun.vim'
 Bundle 'neocomplcache'
-Bundle 'vim-coffee-script'
+Bundle 'The-NERD-tree'
+Bundle 'Markdown'
+Bundle 'itchyny/lightline.vim'
 
 " neocomplcache
 let g:neocomplcache_enable_at_startup = 1
@@ -120,3 +122,6 @@ function InsertTabWrapper()
 endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 
+"NERDTree
+autocmd VimEnter * NERDTree ./
+let NERDTreeShowHidden=1
