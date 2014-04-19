@@ -8,11 +8,20 @@ colors
 
 PROMPT="%F{blue}%~%k%f> "
 
+# 入力したコマンドが存在せず、かつディレクトリ名と一致するなら、ディレクトリに cd1
+setopt auto_cd
+
+# cd した先のディレクトリをディレクトリスタックに追加
+setopt auto_pushd
+setopt pushd_ignore_dups
+
+alias ..='cd ..'
 alias ll='ls -laFG'
 alias vim='mvim'
 alias dot='cd ~/dev/dotfiles'
 alias v='vim'
 alias g='git'
+alias gstat='git status --short --branch'
 alias showpath='echo $PATH'
 alias diff='colordiff'
 
