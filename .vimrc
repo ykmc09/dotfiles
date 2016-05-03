@@ -4,7 +4,7 @@ filetype on
 "バックアップファイル、スワップファイルを作るディレクトリ
 set backupdir=~/.tmp
 set directory=~/.tmp
-
+set undodir=~/.tmp
 
 "---------------------------------------------------------------------------
 " 検索挙動に関する設定:
@@ -125,3 +125,7 @@ inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 "NERDTree
 autocmd VimEnter * NERDTree ./
 let NERDTreeShowHidden=1
+" Go to previous (last accessed) window.
+autocmd VimEnter * wincmd p
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
