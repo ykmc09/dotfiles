@@ -93,9 +93,12 @@ highlight CursorLine ctermbg=black guibg=black
 " プラグイン
 "
 " Vundle 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set nocompatible              " be iMproved, required
+filetype off                  " required
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
+Plugin 'VundleVim/Vundle.vim'
 Bundle 'ZenCoding.vim'
 Bundle 'surround.vim'
 Bundle 'quickrun.vim'
@@ -103,6 +106,9 @@ Bundle 'neocomplcache'
 Bundle 'The-NERD-tree'
 Bundle 'Markdown'
 Bundle 'itchyny/lightline.vim'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 " neocomplcache
 let g:neocomplcache_enable_at_startup = 1

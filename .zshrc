@@ -3,7 +3,7 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 autoload -U compinit
 compinit
 
-autoload colors
+autoload -U colors
 colors
 
 PROMPT="%F{blue}%~%k%f> "
@@ -25,9 +25,17 @@ alias gstat='git status --short --branch'
 alias showpath='echo $PATH'
 alias diff='colordiff'
 
-export JAVA_HOME="/Library/Java/Home"
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH:$JAVA_HOME/bin"
+# rbenv
+[[ -d ~/.rbenv  ]] && \
+  export PATH=${HOME}/.rbenv/bin:${PATH} && \
+  eval "$(rbenv init -)"
+
+# nodenv
+[[ -d ~/.nodenv  ]] && \
+  export PATH="$HOME/.nodenv/bin:$PATH"
+  eval "$(nodenv init -)"
 
 # Enter入力時用処理定義
 function do_enter() {
