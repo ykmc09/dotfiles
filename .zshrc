@@ -16,23 +16,26 @@ setopt auto_pushd
 setopt pushd_ignore_dups
 
 alias ..='cd ..'
-alias ll='ls -laFG'
+alias ll='ls -laFG --color=always'
+alias showpath='echo $PATH'
+alias diff='colordiff'
+alias tailf='tail -f'
+
 alias vim='mvim'
-alias dot='cd ~/dev/dotfiles'
 alias v='vim'
+
 alias g='git'
 alias gs='git status --short --branch'
 alias gd='git diff'
 alias gcm='git checkout master'
 alias gpr='git pull --rebase upstream master'
-alias showpath='echo $PATH'
-alias diff='colordiff'
+alias hc='hub checkout'
 
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
 # rbenv
 [[ -d ~/.rbenv  ]] && \
-  export PATH=${HOME}/.rbenv/bin:${PATH} && \
+  export PATH="$HOME/.rbenv/bin:$PATH" && \
   eval "$(rbenv init -)"
 
 # nodenv
