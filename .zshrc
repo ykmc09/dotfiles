@@ -37,7 +37,7 @@ export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
 # nodenv
 [[ -d ~/.nodenv  ]] && \
-  export PATH="$HOME/.nodenv/bin:$PATH"
+  export PATH="$HOME/.nodenv/bin:$PATH" && \
   eval "$(nodenv init -)"
 
 # Enter入力時用処理定義
