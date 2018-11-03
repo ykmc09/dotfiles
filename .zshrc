@@ -16,7 +16,7 @@ setopt auto_pushd
 setopt pushd_ignore_dups
 
 alias ..='cd ..'
-alias ll='ls -laFG --color=always'
+alias ll='ls -laFG'
 alias showpath='echo $PATH'
 alias diff='colordiff'
 alias tailf='tail -f'
