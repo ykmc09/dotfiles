@@ -33,15 +33,18 @@ alias hc='hub checkout'
 
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
+# Homebrew の設定は ~/.zshrc の brew shellenv に一本化
+
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv init --path)"
+
 # rbenv
 [[ -d ~/.rbenv  ]] && \
   export PATH="$HOME/.rbenv/bin:$PATH" && \
   eval "$(rbenv init -)"
-
-# nodenv
-[[ -d ~/.nodenv  ]] && \
-  export PATH="$HOME/.nodenv/bin:$PATH" && \
-  eval "$(nodenv init -)"
 
 # Enter入力時用処理定義
 function do_enter() {
