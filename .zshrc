@@ -33,6 +33,10 @@ alias hc='hub checkout'
 
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
+source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
+export CLOUDSDK_PYTHON=$(pyenv root)/versions/3.13.11/bin/python3
+
 # Homebrew の設定は ~/.zshrc の brew shellenv に一本化
 
 export PATH=$HOME/.nodebrew/current/bin:$PATH
